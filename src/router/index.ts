@@ -3,6 +3,7 @@ import type { RouteConfig } from 'vue-router';
 import VueRouter from 'vue-router';
 import HomeView from '../views/HomeView.vue';
 import UnserUnternehmen from '../views/UnserUnternehmen.vue';
+import UnsereLeistungen from '../views/UnsereLeistungen.vue';
 Vue.use(VueRouter);
 
 export const unternehmenRoute = {
@@ -15,7 +16,7 @@ export const unternehmenRoute = {
 export const leisungRoute = {
   path: '/leistungen',
   name: 'leistungen',
-  component: HomeView,
+  component: UnsereLeistungen,
   nameInDerNavigation: 'Leistungen',
   icon: 'mdi-account',
 };
