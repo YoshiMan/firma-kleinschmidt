@@ -43,7 +43,7 @@ export default Vue.extend({
     };
   },
   watch: {
-    innerDrawerZeigen(newValue) {
+    innerNavigationAnzeigen(newValue) {
       this.$emit('input', newValue);
     },
     value(newValue) {
