@@ -14,7 +14,10 @@
     </v-row>
 
     <v-row>
-      <v-col>
+      <v-col
+        cols="12"
+        sm="6"
+      >
         <v-card>
           <v-card-title>
             Karl Kleinschmidt Maschinenbau e.K.
@@ -114,7 +117,10 @@
           </v-card-text>
         </v-card>
       </v-col>
-      <v-col>
+      <v-col
+        cols="12"
+        sm="6"
+      >
         <v-card>
           <v-card-title>
             Anfahrt

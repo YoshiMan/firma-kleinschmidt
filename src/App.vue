@@ -6,12 +6,12 @@
       dark
       clipped-left
     >
-      <v-app-bar-nav-icon @click.stop="drawerZeigen = !drawerZeigen" />
+      <v-app-bar-nav-icon @click.stop="navigationAnzeigen = !navigationAnzeigen" />
       <v-row align-content="center">
         <v-col>Karl Kleinschmidt Maschinenbau e.K.</v-col>
       </v-row>
     </v-app-bar>
-    <TheNavigation v-model="drawerZeigen" />
+    <TheNavigation v-model="navigationAnzeigen" />
     <v-main>
       <v-container>
         <v-row>
@@ -34,7 +34,7 @@ export default Vue.extend({
   components: { TheNavigation, TheFooter },
   data() {
     return {
-      drawerZeigen: !this.$vuetify.breakpoint.mobile,
+      navigationAnzeigen: !this.$vuetify.breakpoint.mobile,
     };
   },
 });

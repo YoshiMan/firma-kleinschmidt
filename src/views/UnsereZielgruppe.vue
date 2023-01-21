@@ -19,7 +19,11 @@
     </v-row>
 
     <v-row>
-      <v-col>
+      <v-col
+        cols="12"
+        sm="6"
+        md="4"
+      >
         <v-card>
           <v-card-title>
             Industrie
@@ -37,7 +41,11 @@
           </v-card-text>
         </v-card>
       </v-col>
-      <v-col>
+      <v-col
+        cols="12"
+        sm="6"
+        md="4"
+      >
         <v-card>
           <v-card-title>
             Handwerk
@@ -54,7 +62,11 @@
           </v-card-text>
         </v-card>
       </v-col>
-      <v-col>
+      <v-col
+        cols="12"
+        sm="6"
+        md="4"
+      >
         <v-img
           class="rounded"
           src="http://www.kleinschmidt-maschinenbau.de/bilder/einzelbilder/zielgruppe.jpg"
