@@ -1,4 +1,4 @@
-# firma_kleinschmidt
+# firma-kleinschmidt
 
 ## Project setup
 ```
