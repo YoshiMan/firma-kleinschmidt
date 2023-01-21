@@ -32,8 +32,10 @@ import TheFooter from '@/components/TheFooter.vue';
 
 export default Vue.extend({
   components: { TheNavigation, TheFooter },
-  data: () => ({
-    drawerZeigen: true,
-  }),
+  data() {
+    return {
+      drawerZeigen: !this.$vuetify.breakpoint.mobile,
+    };
+  },
 });
 </script>

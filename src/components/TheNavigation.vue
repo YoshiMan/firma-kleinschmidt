@@ -1,6 +1,6 @@
 <template>
   <v-navigation-drawer
-    v-model="innerDrawerZeigen"
+    v-model="innerNavigationAnzeigen"
     app
     flat
     clipped
@@ -38,7 +38,7 @@ export default Vue.extend({
   },
   data() {
     return {
-      innerDrawerZeigen: this.value,
+      innerNavigationAnzeigen: this.value,
       navigation,
     };
   },
@@ -47,7 +47,7 @@ export default Vue.extend({
       this.$emit('input', newValue);
     },
     value(newValue) {
-      this.innerDrawerZeigen = newValue;
+      this.innerNavigationAnzeigen = newValue;
     },
   },
 
