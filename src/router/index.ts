@@ -1,65 +1,74 @@
 import Vue from 'vue';
 import type { RouteConfig } from 'vue-router';
 import VueRouter from 'vue-router';
-import HomeView from '../views/HomeView.vue';
 import UnserUnternehmen from '../views/UnserUnternehmen.vue';
 import UnsereLeistungen from '../views/UnsereLeistungen.vue';
+import UnsereZielgruppe from '../views/UnsereZielgruppe.vue';
+import UnsereQualifikationen from '../views/UnsereQualifikationen.vue';
+import KontaktKarte from '../views/KontaktKarte.vue';
+import DatenschutzErklärung from '../views/DatenschutzErklärung.vue';
+import ImpressumKarte from '../views/ImpressumKarte.vue';
+
 Vue.use(VueRouter);
 
-export const unternehmenRoute = {
+const unternehmenRoute = {
   path: '/unternehmen',
   name: 'unternehmen',
   component: UnserUnternehmen,
   nameInDerNavigation: 'Unternehmen',
   icon: 'mdi-account',
 };
-export const leisungRoute = {
+const leisungRoute = {
   path: '/leistungen',
   name: 'leistungen',
   component: UnsereLeistungen,
   nameInDerNavigation: 'Leistungen',
   icon: 'mdi-account',
 };
-export const zielgruppeRoute = {
+const zielgruppeRoute = {
   path: '/zielgruppe',
   name: 'zielgruppe',
-  component: HomeView,
+  component: UnsereZielgruppe,
   nameInDerNavigation: 'Zielgruppe',
   icon: 'mdi-account',
 };
-export const qualifikationenRoute = {
+const qualifikationenRoute = {
   path: '/qualifikationen',
   name: 'qualifikationen',
-  component: HomeView,
+  component: UnsereQualifikationen,
   nameInDerNavigation: 'Qualifikationen',
   icon: 'mdi-account',
 };
-export const kontaktRoute = {
+const kontaktRoute = {
   path: '/kontakt',
   name: 'kontakt',
-  component: HomeView,
+  component: KontaktKarte,
   nameInDerNavigation: 'Kontakt',
   icon: 'mdi-account',
 };
-export const datenschutzRoute = {
+const datenschutzRoute = {
   path: '/datenschutz',
   name: 'datenschutz',
-  component: HomeView,
+  component: DatenschutzErklärung,
   nameInDerNavigation: 'Datenschutz',
   icon: 'mdi-account',
 };
-export const impressumRoute = {
+const impressumRoute = {
   path: '/impressum',
   name: 'impressum',
-  component: HomeView,
+  component: ImpressumKarte,
   nameInDerNavigation: 'Impressum',
   icon: 'mdi-account',
 };
-export const routes: Array<RouteConfig & { nameInDerNavigation: string; icon: string }> = [
+
+export const navigation: Array<RouteConfig & { nameInDerNavigation: string; icon: string }> = [
   unternehmenRoute,
   leisungRoute,
   zielgruppeRoute,
   qualifikationenRoute,
+];
+
+export const footer: Array<RouteConfig & { nameInDerNavigation: string; icon: string }> = [
   kontaktRoute,
   datenschutzRoute,
   impressumRoute,
@@ -68,7 +77,12 @@ export const routes: Array<RouteConfig & { nameInDerNavigation: string; icon: st
 const router = new VueRouter({
   mode: 'history',
   base: process.env.BASE_URL,
-  routes,
+  routes: [...navigation, ...footer,
+    {
+      name: 'CatchAll',
+      path: '/:pathMatch(.*)*',
+      redirect: unternehmenRoute,
+    }],
 });
 
 export default router;

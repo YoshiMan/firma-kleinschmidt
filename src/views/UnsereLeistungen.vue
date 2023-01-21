@@ -1,7 +1,11 @@
 <template>
   <v-container>
-    <v-row>
-      <v-col>
+    <v-row
+      justify="center"
+    >
+      <v-col
+        cols="auto"
+      >
         <v-img
           class="rounded"
           src="http://www.kleinschmidt-maschinenbau.de/bilder/headlines/leistungen.jpg"

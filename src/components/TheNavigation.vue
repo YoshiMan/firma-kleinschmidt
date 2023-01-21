@@ -27,8 +27,7 @@
 
 <script lang="ts">
 import Vue from 'vue';
-import { routes } from '@/router';
-const navigation = routes;
+import { navigation } from '@/router';
 
 export default Vue.extend({
   props: {

@@ -8,7 +8,7 @@
     >
       <v-app-bar-nav-icon @click.stop="drawerZeigen = !drawerZeigen" />
       <v-row align-content="center">
-        <v-col>Karl Kleinschmidt Maschinenbau e.&nbsp;K.</v-col>
+        <v-col>Karl Kleinschmidt Maschinenbau e.K.</v-col>
       </v-row>
     </v-app-bar>
     <TheNavigation v-model="drawerZeigen" />
@@ -21,15 +21,17 @@
         </v-row>
       </v-container>
     </v-main>
+    <TheFooter />
   </v-app>
 </template>
 
 <script lang="ts">
 import Vue from 'vue';
 import TheNavigation from '@/components/TheNavigation.vue';
+import TheFooter from '@/components/TheFooter.vue';
 
 export default Vue.extend({
-  components: { TheNavigation },
+  components: { TheNavigation, TheFooter },
   data: () => ({
     drawerZeigen: true,
   }),
