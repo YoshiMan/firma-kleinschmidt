@@ -1,5 +1,7 @@
 <template>
   <v-container>
+    <AbschnittTitel titel="Unser Unternehmen" />
+
     <v-row
       justify="center"
     >
@@ -8,7 +10,7 @@
       >
         <v-img
           class="rounded"
-          src="http://www.kleinschmidt-maschinenbau.de/bilder/headlines/unternehmen.jpg"
+          src="@/assets/images/unternehmen.jpg"
         />
       </v-col>
     </v-row>
@@ -16,7 +18,6 @@
     <v-row>
       <v-col
         cols="12"
-        sm="6"
       >
         <v-card>
           <v-card-title>
@@ -33,7 +34,6 @@
       </v-col>
       <v-col
         cols="12"
-        sm="6"
       >
         <v-card>
           <v-card-title>
@@ -53,7 +53,9 @@
 
 <script lang="ts">
 import Vue from 'vue';
+import AbschnittTitel from '@/components/AbschnittTitel.vue';
 export default Vue.extend({
+  components: { AbschnittTitel },
 
 });
 </script>

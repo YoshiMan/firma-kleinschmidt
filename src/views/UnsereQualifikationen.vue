@@ -1,5 +1,7 @@
 <template>
   <v-container>
+    <AbschnittTitel titel="Unsere Qualifikationen" />
+
     <v-row
       justify="center"
     >
@@ -8,7 +10,7 @@
       >
         <v-img
           class="rounded"
-          src="http://www.kleinschmidt-maschinenbau.de/bilder/headlines/qualifikationen.jpg"
+          src="@/assets/images/qualifikationen.jpg"
         />
       </v-col>
     </v-row>
@@ -16,7 +18,6 @@
     <v-row>
       <v-col
         cols="12"
-        sm="8"
       >
         <v-card>
           <v-card-title>
@@ -31,25 +32,14 @@
           </v-card-text>
         </v-card>
       </v-col>
-      <v-col
-        cols="12"
-        sm="4"
-      >
-        <v-card>
-          <v-card-text>
-            <v-img
-              src="http://www.kleinschmidt-maschinenbau.de/bilder/einzelbilder/qualifikationen.jpg"
-            />
-          </v-card-text>
-        </v-card>
-      </v-col>
     </v-row>
   </v-container>
 </template>
 
 <script lang="ts">
 import Vue from 'vue';
+import AbschnittTitel from '@/components/AbschnittTitel.vue';
 export default Vue.extend({
-
+  components: { AbschnittTitel },
 });
 </script>

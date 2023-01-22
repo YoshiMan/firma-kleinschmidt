@@ -1,5 +1,7 @@
 <template>
   <v-container>
+    <AbschnittTitel titel="Unsere Leistungen" />
+
     <v-row
       justify="center"
     >
@@ -8,12 +10,14 @@
       >
         <v-img
           class="rounded"
-          src="http://www.kleinschmidt-maschinenbau.de/bilder/headlines/leistungen.jpg"
+          src="@/assets/images/leistungen.jpg"
         />
       </v-col>
     </v-row>
     <v-row>
-      <v-col>
+      <v-col
+        cols="12"
+      >
         Das Leistungsangebot der Fa. Kleinschmidt umfasst folgende Bereiche:
       </v-col>
     </v-row>
@@ -21,7 +25,6 @@
     <v-row>
       <v-col
         cols="12"
-        sm="6"
       >
         <v-card>
           <v-card-title>
@@ -38,7 +41,6 @@
       </v-col>
       <v-col
         cols="12"
-        sm="6"
       >
         <v-card>
           <v-card-title>
@@ -48,14 +50,12 @@
             <p>
               Bei einem Defekt einer Maschine kommt es gerade in der Industrie häufig darauf an möglichst schnell den Produktionsablauf wieder in Gang zu bekommen. Hierbei sind die Erfahrungen in den verschiedensten Bereichen des Maschinenbaus hilfreich um möglichst zeitnah eine Behebung des Defektes zu erreichen. Dabei kann es sich um eine zunächst provisorische Reparatur handeln um Zeit für die Beschaffung eines Originalersatzteiles zu gewinnen. Ebenso gehört die Konstruktion und Einzelfertigung von Ersatzteilen zu unserem Angebot.
             </p>
-            <v-img
-              class="rounded"
-              src="http://www.kleinschmidt-maschinenbau.de/bilder/einzelbilder/reperatur.jpg"
-            />
           </v-card-text>
         </v-card>
       </v-col>
-      <v-col>
+      <v-col
+        cols="12"
+      >
         <v-card>
           <v-card-title>
             Fertigung von Kleinserien
@@ -64,10 +64,6 @@
             <p>
               Die modernen computergesteuerten Fertigungsmaschinen sind aufgrund hoher Rüstzeiten für die Massenproduktion ausgelegt. Dadurch wird ihr Einsatz für die Kleinserien- und Einzelteilfertigung oftmals zu kostenintensiv. Die für den Sondermaschinenbau benötigten Fertigungsmaschinen sind mit ihrer Genauigkeit ebenfalls für den Einsatz hochpräziser Bauteile geeignet. Der entstehende Rüstaufwand ist im Verhältnis weitaus geringer. Somit können wir auch in diesem Bereich eine Alternative bieten.
             </p>
-            <v-img
-              class="rounded"
-              src=" http://www.kleinschmidt-maschinenbau.de/bilder/einzelbilder/einzel1.jpg"
-            />
           </v-card-text>
         </v-card>
       </v-col>
@@ -77,7 +73,8 @@
 
 <script lang="ts">
 import Vue from 'vue';
+import AbschnittTitel from '@/components/AbschnittTitel.vue';
 export default Vue.extend({
-
+  components: { AbschnittTitel },
 });
 </script>

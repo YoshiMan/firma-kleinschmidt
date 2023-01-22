@@ -8,7 +8,7 @@
       >
         <v-img
           class="rounded"
-          src="http://www.kleinschmidt-maschinenbau.de/bilder/headlines/impressum.jpg"
+          src="@/assets/images/impressum.jpg"
         />
       </v-col>
     </v-row>

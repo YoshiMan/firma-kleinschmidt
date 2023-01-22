@@ -1,43 +1,17 @@
 import Vue from 'vue';
 import type { RouteConfig } from 'vue-router';
 import VueRouter from 'vue-router';
-import UnserUnternehmen from '../views/UnserUnternehmen.vue';
-import UnsereLeistungen from '../views/UnsereLeistungen.vue';
-import UnsereZielgruppe from '../views/UnsereZielgruppe.vue';
-import UnsereQualifikationen from '../views/UnsereQualifikationen.vue';
+import HomeView from '../views/HomeView.vue';
 import KontaktKarte from '../views/KontaktKarte.vue';
 import DatenschutzErklärung from '../views/DatenschutzErklärung.vue';
 import ImpressumKarte from '../views/ImpressumKarte.vue';
 
 Vue.use(VueRouter);
 
-const unternehmenRoute = {
-  path: '/unternehmen',
-  name: 'unternehmen',
-  component: UnserUnternehmen,
-  nameInDerNavigation: 'Unternehmen',
-  icon: 'mdi-account',
-};
-const leisungRoute = {
-  path: '/leistungen',
-  name: 'leistungen',
-  component: UnsereLeistungen,
-  nameInDerNavigation: 'Leistungen',
-  icon: 'mdi-account',
-};
-const zielgruppeRoute = {
-  path: '/zielgruppe',
-  name: 'zielgruppe',
-  component: UnsereZielgruppe,
-  nameInDerNavigation: 'Zielgruppe',
-  icon: 'mdi-account',
-};
-const qualifikationenRoute = {
-  path: '/qualifikationen',
-  name: 'qualifikationen',
-  component: UnsereQualifikationen,
-  nameInDerNavigation: 'Qualifikationen',
-  icon: 'mdi-account',
+export const homeRoute = {
+  path: '/home',
+  name: 'Home',
+  component: HomeView,
 };
 const kontaktRoute = {
   path: '/kontakt',
@@ -51,22 +25,15 @@ const datenschutzRoute = {
   name: 'datenschutz',
   component: DatenschutzErklärung,
   nameInDerNavigation: 'Datenschutz',
-  icon: 'mdi-account',
+  icon: 'mdi-shield',
 };
 const impressumRoute = {
   path: '/impressum',
   name: 'impressum',
   component: ImpressumKarte,
   nameInDerNavigation: 'Impressum',
-  icon: 'mdi-account',
+  icon: 'mdi-script-text',
 };
-
-export const navigation: Array<RouteConfig & { nameInDerNavigation: string; icon: string }> = [
-  unternehmenRoute,
-  leisungRoute,
-  zielgruppeRoute,
-  qualifikationenRoute,
-];
 
 export const footer: Array<RouteConfig & { nameInDerNavigation: string; icon: string }> = [
   kontaktRoute,
@@ -77,11 +44,11 @@ export const footer: Array<RouteConfig & { nameInDerNavigation: string; icon: st
 const router = new VueRouter({
   mode: 'history',
   base: process.env.BASE_URL,
-  routes: [...navigation, ...footer,
+  routes: [homeRoute, ...footer,
     {
       name: 'CatchAll',
       path: '/:pathMatch(.*)*',
-      redirect: unternehmenRoute,
+      redirect: homeRoute,
     }],
 });
 

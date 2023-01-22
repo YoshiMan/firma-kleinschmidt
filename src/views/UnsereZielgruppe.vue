@@ -1,5 +1,6 @@
 <template>
   <v-container>
+    <AbschnittTitel titel="Unsere Zielgruppe" />
     <v-row
       justify="center"
     >
@@ -8,21 +9,21 @@
       >
         <v-img
           class="rounded"
-          src="http://www.kleinschmidt-maschinenbau.de/bilder/headlines/zielgruppe.jpg"
+          src="@/assets/images/zielgruppe.jpg"
         />
       </v-col>
     </v-row>
     <v-row>
-      <v-col>
+      <v-col
+        cols="12"
+      >
         Unser Leistungsangebot ist auf den Bedarf im Maschinenbau in der Region ausgerichtet. Dabei arbeiten wir unter anderem für Kunden aus folgenden Bereichen der Wirtschaft:
       </v-col>
     </v-row>
 
     <v-row>
       <v-col
-        cols="12"
-        sm="6"
-        md="4"
+        cols="6"
       >
         <v-card>
           <v-card-title>
@@ -42,9 +43,7 @@
         </v-card>
       </v-col>
       <v-col
-        cols="12"
-        sm="6"
-        md="4"
+        cols="6"
       >
         <v-card>
           <v-card-title>
@@ -62,22 +61,13 @@
           </v-card-text>
         </v-card>
       </v-col>
-      <v-col
-        cols="12"
-        sm="6"
-        md="4"
-      >
-        <v-img
-          class="rounded"
-          src="http://www.kleinschmidt-maschinenbau.de/bilder/einzelbilder/zielgruppe.jpg"
-        />
-      </v-col>
     </v-row>
   </v-container>
 </template>
 
 <script lang="ts">
 import Vue from 'vue';
+import AbschnittTitel from '@/components/AbschnittTitel.vue';
 const industriePartner = [
   'Automobilindustrie',
   'Kunststoffindustrie',
@@ -97,12 +87,12 @@ const handwerkPartner = [
 ];
 
 export default Vue.extend({
+  components: { AbschnittTitel },
   data() {
     return {
       industriePartner,
       handwerkPartner,
     };
   },
-
 });
 </script>
